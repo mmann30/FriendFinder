@@ -1,0 +1,1 @@
+FriendFinder is a dataing application created using Node.js with the Express package.
