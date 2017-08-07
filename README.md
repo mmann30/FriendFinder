@@ -1,1 +1,1 @@
-FriendFinder is a dataing application created using Node.js with the Express package.
+FriendFinder is a dating application created using Node.js with the Express package.
