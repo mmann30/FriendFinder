@@ -15,117 +15,147 @@
   <div class="container">
 
     <div class="jumbotron">
-      <h1 class="text-center">Friend Finder</h1>
+      <h1 class="text-left">Friend Finder</h1>
       <hr>
-      <h2 class="text-center">Add a Friend</h2>
+      <h2 class="text-left">Take the survey to find a Friend</h2>
       <br>
-
-      <div class="text-center">
-        <a href="/tables"><button type="button" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-list-alt"></span> View Tables</button></a>
-        <a href="/"><button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span></button></a>
-      </div>
     </div>
 
+    <!-- Survey Questions  -->
     <div class="row">
-      <div class="col-lg-12">
-
-        <!-- Reservation Page -->
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">Table Reservation</h4>
-          </div>
-          <div class="panel-body">
-
-            <form role="form">
-
+        <div class="col-lg-12">
+          <form>
+            
+            <section>
+              <h3>About You</h3>
               <div class="form-group">
-                <label for="reserve-name">Name</label>
-                <input type="text" class="form-control" id="reserve-name">
+                <label for="name">Name (Required)</label>
+                <input type="text" class="form-control">
               </div>
-
               <div class="form-group">
-                <label for="reserve-phone">Phone Number</label>
-                <input type="text" class="form-control" id="reserve-phone">
+                <label for="photoLink">Link to Photo Image (Required)</label>
+                <input type="url" class="form-control">
               </div>
+            </section>
 
+            <hr>
+
+            <section>
+              <h3>Question 1</h3>
               <div class="form-group">
-                <label for="reserve-email">Email</label>
-                <input type="text" class="form-control" id="reserve-email">
+                <label for="questionOne"><h4>You like long walks on the beach.</h4></label>
+                <div class="row">
+                  <div class="col-lg-3">
+                    <select class="form-control">
+                        <option selected disabled> Select an Option </option>
+                        <option>1 (Strongly Disagree)</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5 (Strongly Agree)</option>
+                    </select>
+                  </div>
+                </div>
               </div>
+            </section>
 
+            <section>
+              <h3>Question 2</h3>
               <div class="form-group">
-                <label for="reserve-unique-id">Unique ID</label>
-                <input type="text" class="form-control" id="reserve-unique-id">
+                <label for="questionOne"><h4>You like to read books by the fireplace.</h4></label>
+                <div class="row">
+                  <div class="col-lg-3">
+                    <select class="form-control">
+                        <option selected disabled> Select an Option </option>
+                        <option>1 (Strongly Disagree)</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5 (Strongly Agree)</option>
+                    </select>
+                  </div>
+                </div>
               </div>
+            </section>
 
-              <button type="submit" class="btn btn-primary submit">Submit</button>
-            </form>
+            <section>
+              <h3>Question 3</h3>
+              <div class="form-group">
+                <label for="questionOne"><h4>Dogs are better than cats.</h4></label>
+                <div class="row">
+                  <div class="col-lg-3">
+                    <select class="form-control">
+                        <option selected disabled> Select an Option </option>
+                        <option>1 (Strongly Disagree)</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5 (Strongly Agree)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </section>
 
-          </div>
+            <section>
+              <h3>Question 4</h3>
+              <div class="form-group">
+                <label for="questionOne">Crunchy peanut butter is an abomination.</label>
+                <div class="row">
+                  <div class="col-lg-3">
+                    <select class="form-control">
+                        <option selected disabled> Select an Option </option>
+                        <option>1 (Strongly Disagree)</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5 (Strongly Agree)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <h3>Question 5</h3>
+              <div class="form-group">
+                <label for="questionOne"><h4>It is acceptable to say you "read the book" if you only listened to audio version.</h4></label>
+                <div class="row">
+                  <div class="col-lg-3">
+                    <select class="form-control">
+                        <option selected disabled> Select an Option </option>
+                        <option>1 (Strongly Disagree)</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5 (Strongly Agree)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <button type="submit" class="btn btn-primary col-lg-12"><strong><h4>Submit</h4></strong></button>
+
+          </form>
         </div>
-
-      </div>
     </div>
 
+    <hr>
 
-    <footer class="footer">
-      <div class="container">
-        <p><a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API Wait List</a> | <a href="https://github.com/afhaque/HotRestaurant">GitHub Repo</a></p>
-      </div>
+    <footer>
+      <ul class="nav nav-pills pull-left">
+        <li><a href="/api/friends">API Friends List</a></li>
+        <li><a href="https://github.com/mmann30/FriendFinder" target="_blank">GitHub Repo</a></li>
+      </ul>
     </footer>
-
   </div>
 
 </body>
 </html>
 
-<!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
+
 <script type="text/javascript">
 
-    // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
-    // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
-    // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
-    // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
-
-    $(".submit").on("click", function(event) {
-      event.preventDefault();
-
-      // Here we grab the form elements
-      var newReservation = {
-        customerName: $("#reserve-name").val().trim(),
-        phoneNumber: $("#reserve-phone").val().trim(),
-        customerEmail: $("#reserve-email").val().trim(),
-        customerID: $("#reserve-unique-id").val().trim()
-      };
-
-      console.log(newReservation);
-
-      // This line is the magic. It"s very similar to the standard ajax function we used.
-      // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
-      // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
-      // depending on if a tables is available or not.
-
-      $.post("/api/tables", newReservation,
-        function(data) {
-
-          // If a table is available... tell user they are booked.
-          if (data) {
-            alert("Yay! You are officially booked!");
-          }
-
-          // If a table is available... tell user they on the waiting list.
-          else {
-            alert("Sorry you are on the wait list");
-          }
-
-          // Clear the form when submitting
-          $("#reserve-name").val("");
-          $("#reserve-phone").val("");
-          $("#reserve-email").val("");
-          $("#reserve-unique-id").val("");
-
-        });
-
-    });
 
 </script>
