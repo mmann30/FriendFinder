@@ -30,11 +30,11 @@
               <h3>About You</h3>
               <div class="form-group">
                 <label for="name">Name (Required)</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" required>
               </div>
               <div class="form-group">
                 <label for="photoLink">Link to Photo Image (Required)</label>
-                <input type="url" class="form-control">
+                <input type="url" class="form-control" required>
               </div>
             </section>
 
@@ -135,7 +135,9 @@
               </div>
             </section>
 
-            <button type="submit" class="btn btn-primary col-lg-12"><strong><h4>Submit</h4></strong></button>
+            <button type="submit" class="btn btn-primary col-lg-12" id="submit" data-toggle="modal" data-target="#exampleModal">
+              <strong><h4>Submit</h4></strong>
+            </button>
 
           </form>
         </div>
@@ -149,16 +151,31 @@
         <li><a href="https://github.com/mmann30/FriendFinder" target="_blank">GitHub Repo</a></li>
       </ul>
     </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <!-- ToDo add most Compatible Friend  -->
+             <h5 class="modal-title" id="exampleModalLabel">Most Compatible Friend</h5> 
+          </div>
+          <div class="modal-body">
+            <img id="compatibleFriendImg" src="" alt="friend">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
   </div>
 </body>
 
 <script type="text/javascript">
-// Need to add in post functionality
+  $("#submit").on("click", function(event) {
+    event.preventDefault();
+  });
 </script>
 </html>
-
-
-<script type="text/javascript">
-
-
-</script>
